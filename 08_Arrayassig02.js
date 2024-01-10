@@ -6,31 +6,66 @@ console.log(`Total elements available or length: ${arrayNumbers.length}`);
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 02===>> Log the first element & last element in arrayNumbers & log on console`);
-console.log(`First Element :: 20`);                                                                                                                                                             
-console.log(`Last Element :: 11`);
+console.log("First Element",arrayNumbers[0]);                                                                                                                                                             
+console.log("Last Element",arrayNumbers[arrayNumbers.length-1]);
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 03===>> Log the third last element using length property & log on console`);
-const arrayNumb = [20,31,40,25,23,11,29,9,60,2,11]; 
+console.log("Third last Element is ==>",arrayNumbers[arrayNumbers.length-3]);
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 04===>> Find the all even numbers using for of loop & log on console`);
-const arrayNu = [20,31,40,25,23,11,29,9,60,2,11]; 
+for (const iterator of arrayNumbers) {
+    if (iterator%2==0){
+        console.log(iterator);
+  
+    }
+    }
+    console.log(`===========================================================================================`);
+    console.log(`<<===STEP--> 05===>> Find the odd numbers for of loop & log on console`);
+    for (const iterator of arrayNumbers) {
+        if(iterator%2!=0) {
+            console.log(iterator);
+        }
+    }
+    console.log(`===========================================================================================`);
+    console.log(`<<===STEP--> 06===>> Find the all even positioned element from arrayNumbers,sum it & log on console`);
+let sum=0;
+for (const key in arrayNumbers) {
+    if (key%2==0) {
+        sum=sum+arrayNumbers[key];
+        
+    }
+}
+console.log("Sum of all even positioned element:",sum);
+
+console.log(`===========================================================================================`);
+console.log(`<<===STEP--> 07===>> Find the all odd positioned element from arrayNumbers,Sum it & log on console`);
+let sum1 =0;
+for (const key in arrayNumbers) {
+    if (key%2!=0) {
+        sum1=sum1+arrayNumbers[key];
+    }
+}
+console.log("Sum of all odd Positioned element::",sum1);
 
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 08===>> Find the  sum of all elements from arrayNumbers, & log on console`);
-let sum = 0;
-for (let index = 0; index < arrayNumbers.length; index++) {
-    sum = sum + arrayNumbers[index];
+let sum2=0;
+for (const key in arrayNumbers) {
 
+    sum2=sum2+arrayNumbers[key]
 }
-console.log(`sum of all elements from arrayNumbers ::${sum}`);
+console.log("sum of all elements from arrayNumbers ::",sum2);
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 09===>> Find the numbers which are multiple of 5 `);
-
-
+for (const iterator of arrayNumbers) {
+    if (iterator%5==0) {
+     console.log(iterator);   
+    }
+}
 
 console.log(`===========================================================================================`);
 console.log(`<<===STEP--> 10===>> is number 115 available in arrayNumbers ? `);
